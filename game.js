@@ -5,7 +5,7 @@ let level = 1;
 let gameIsOn = false;
 
 $(document).keydown(function (event) {
-    if (event.key == "a") {
+    if (level === 1 && event.key == "a") {
         gameIsOn = true;
         nextSequence();
     }
