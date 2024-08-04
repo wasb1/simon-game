@@ -18,6 +18,8 @@ for (let i = 0; i < buttonColours.length; i++) {
         userPattern.push(buttonColours[i]);
         if (gamePattern[userPattern.length - 1] !== buttonColours[i] && gameIsOn) {
             gameIsOn = false;
+            let failAudio = new Audio("./sounds/wrong.mp3");
+            failAudio.play()
             $("h1").text("GAME OVER! Press A to restart");
             level = 1;
         } else if (gamePattern.length === userPattern.length && gameIsOn) {
